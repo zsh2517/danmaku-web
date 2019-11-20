@@ -9,5 +9,5 @@ function redirect() {
     if(!docCookies.hasItem("stuid")) {
         docCookies.setItem("stuid", toString(stuid));
     }
-    location.href = "/send.html";
+    location.href = "send.html";
 }

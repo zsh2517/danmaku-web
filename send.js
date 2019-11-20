@@ -2,8 +2,8 @@
 function init() {
     if(!docCookies.hasItem("stuid")) {
         alert("请先输入学号~");
-        
-        location.href = "/index.html";
+        // redirect 
+        location.href = "index.html";
     }
     document.getElementById("stuid").value = docCookies.getItem("stuid");
 }
