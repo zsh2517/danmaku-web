@@ -17,7 +17,7 @@ function submit() {
     let type = $('input[name=type]:checked').val();
     let color = $('input[name=color]').val();
     let fontsize = $('input[name=fontsize]:checked').val();
-    text = atob(text);
+    text = btoa(text);
     $.post(BACKEND_URL, {
         type: type,
         color: color,
