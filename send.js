@@ -14,11 +14,13 @@ function submit() {
         alert("弹幕内容为空~");
         return;
     }
+    let stuid = docCookies.getItem("stuid");
     let type = $('input[name=type]:checked').val();
     let color = $('input[name=color]').val();
     let fontsize = $('input[name=fontsize]:checked').val();
     text = Base64.encode(text);
     $.post(BACKEND_URL, {
+        stuid: stuid,
         type: type,
         color: color,
         fontsize: fontsize,
