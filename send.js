@@ -30,6 +30,7 @@ function submit() {
         console.log(res);
         if (res.status == "OK") {
             alert("弹幕发送成功");
+            document.getElementById("text").innerText = "";
         } else {
             alert("弹幕发送失败...原因如下\n" + res.message);
         }
