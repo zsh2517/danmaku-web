@@ -1,13 +1,16 @@
-"use strict";
-
 function redirect() {
-    let stuid = document.getElementById("stuid").value;
-    if(stuid.trim() == "") {
-        alert("请输入学号再试试~");
+    let userid = document.getElementById("userid").value;
+    let roomid = document.getElementById("roomid").value;
+    if(roomid.trim() == "") {
+        alert("房间号不能为空哦~");
         return;
     }
-    if(!docCookies.hasItem("stuid")) {
-        docCookies.setItem("stuid", stuid);
+    if(userid.trim() == "") {
+        alert("用户名不能为空哦~");
+        return;
     }
-    location.href = "send.html";
+    // if(!docCookies.hasItem("userid")) {
+        docCookies.setItem("userid", userid);
+    // } 
+    location.href = "send.html?roomid="+roomid;
 }

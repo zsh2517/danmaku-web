@@ -17,11 +17,8 @@
     <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script>
     <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script>
-        const BACKEND_URL = "http://danmakuapi.billchn.com/";
-    </script>
     <script src="cookies.js"></script>
-    <script src="send.js?time=1576229865"></script>
+    <script src="send.js?time=1577596606"></script>
     <script src="base64.js"></script>
     <style>
         /* navbar */
@@ -115,15 +112,15 @@
 
     <nav class="navbar navbar-default" role="navigation">
         <div class="navbar navbar-default" role="navigation">
-            <div class="navbar-header">
-                支部大舞台弹幕发送器
+            <div class="navbar-header" id="title">
+                弹幕发送器
             </div>
         </div>
     </nav>
 
     <div class="container">
-        <label for="stuid">宁的学号：</label>
-        <input type="number" class="form-control" name="stuid" id="stuid" disabled>
+        <label for="userid">宁的学号：</label>
+        <input type="number" class="form-control" name="userid" id="userid" disabled>
         <label for="text">弹幕内容：</label>
         <input type="text" class="form-control" name="text" id="text" placeholder="在这里说点什么吧~">
         <br>
@@ -142,6 +139,8 @@
         <button type="submit" class="btn btn-primary" onclick="submit()">Submit</button>
     </div>
     <script>
+        let roomid=getQueryString("roomid");
+        BACKEND_URL = "http://doc.zsh2517.com/back/send.php?roomid="+roomid;
         init();
     </script>
 </body>
