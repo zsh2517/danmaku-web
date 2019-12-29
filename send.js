@@ -43,6 +43,7 @@ function submit() {
     text = Base64.encode(text);
     $.post(BACKEND_URL, {
         userid: userid,
+        // 如果是danmaku-server-tomcat，这里字段改成stuid
         type: type,
         color: color,
         fontsize: fontsize,
